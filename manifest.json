@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
-    "name": "Google Container",
-    "version": "1.3.1",
+    "name": "Amazon Container",
+    "version": "1.0.0",
 
-    "description": "Google Container isolates your Google activity from the rest of your web activity in order to prevent Google from tracking you outside of the Google website via third party cookies.",
+    "description": "Amazon Container isolates your Amazon activity from the rest of your web activity in order to prevent Amazon from tracking you outside of the Amazon website via third party cookies.",
 
     "icons": {
         "48": "icon.png",
@@ -12,12 +12,12 @@
 
     "applications": {
       "gecko": {
-        "id": "@contain-google",
+        "id": "@contain-amazon",
         "strict_min_version": "57.0"
       }
     },
 
-    "homepage_url": "https://github.com/containers-everywhere/contain-google",
+    "homepage_url": "https://github.com/Jackymancs4/contain-amazon",
 
     "permissions": [
         "<all_urls>",

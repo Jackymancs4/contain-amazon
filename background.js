@@ -1,21 +1,21 @@
 // Param values from https://developer.mozilla.org/Add-ons/WebExtensions/API/contextualIdentities/create
-const GOOGLE_CONTAINER_NAME = "Google";
-const GOOGLE_CONTAINER_COLOR = "red";
-const GOOGLE_CONTAINER_ICON = "briefcase";
-let GOOGLE_DOMAINS = ["google.com", "google.ac", "google.ad", "google.ae", "google.com.af", "google.com.ag", "google.com.ai", "google.al", "google.am", "google.co.ao", "google.com.ar", "google.as", "google.at", "google.com.au", "google.az", "google.ba", "google.com.bd", "google.be", "google.bf", "google.bg", "google.com.bh", "google.bi", "google.bj", "google.com.bn", "google.com.bo", "google.com.br", "google.bs", "google.bt", "google.com.bw", "google.by", "google.com.bz", "google.ca", "google.com.kh", "google.cc", "google.cd", "google.cf", "google.cat", "google.cg", "google.ch", "google.ci", "google.co.ck", "google.cl", "google.cm", "google.cn", "google.com.co", "google.co.cr", "google.com.cu", "google.cv", "google.com.cy", "google.cz", "google.de", "google.dj", "google.dk", "google.dm", "google.com.do", "google.dz", "google.com.ec", "google.ee", "google.com.eg", "google.es", "google.com.et", "google.fi", "google.com.fj", "google.fm", "google.fr", "google.ga", "google.ge", "google.gf", "google.gg", "google.com.gh", "google.com.gi", "google.gl", "google.gm", "google.gp", "google.gr", "google.com.gt", "google.gy", "google.com.hk", "google.hn", "google.hr", "google.ht", "google.hu", "google.co.id", "google.iq", "google.ie", "google.co.il", "google.im", "google.co.in", "google.io", "google.is", "google.it", "google.je", "google.com.jm", "google.jo", "google.co.jp", "google.co.ke", "google.ki", "google.kg", "google.co.kr", "google.com.kw", "google.kz", "google.la", "google.lb", "google.com.lc", "google.li", "google.lk", "google.co.ls", "google.lt", "google.lu", "google.lv", "google.com.ly", "google.co.ma", "google.md", "google.me", "google.mg", "google.mk", "google.ml", "google.com.mm", "google.mn", "google.ms", "google.com.mt", "google.mu", "google.mv", "google.mw", "google.com.mx", "google.com.my", "google.co.mz", "google.com.na", "google.ne", "google.com.nf", "google.com.ng", "google.com.ni", "google.nl", "google.no", "google.com.np", "google.nr", "google.nu", "google.co.nz", "google.com.om", "google.com.pk", "google.com.pa", "google.com.pe", "google.com.ph", "google.pl", "google.com.pg", "google.pn", "google.com.pr", "google.ps", "google.pt", "google.com.py", "google.com.qa", "google.ro", "google.rs", "google.ru", "google.rw", "google.com.sa", "google.com.sb", "google.sc", "google.se", "google.com.sg", "google.sh", "google.si", "google.sk", "google.com.sl", "google.sn", "google.sm", "google.so", "google.st", "google.sr", "google.com.sv", "google.td", "google.tg", "google.co.th", "google.com.tj", "google.tk", "google.tl", "google.tm", "google.to", "google.tn", "google.com.tr", "google.tt", "google.com.tw", "google.co.tz", "google.com.ua", "google.co.ug", "google.co.uk", "google.us", "google.com.uy", "google.co.uz", "google.com.vc", "google.co.ve", "google.vg", "google.co.vi", "google.com.vn", "google.vu", "google.ws", "google.co.za", "google.co.zm", "google.co.zw", "youtube.com", "blogger.com", "doubleclickbygoogle.com", "googleblog.com", "blog.google", "googleusercontent.com"];
+const AMAZON_CONTAINER_NAME = "Amazon";
+const AMAZON_CONTAINER_COLOR = "red";
+const AMAZON_CONTAINER_ICON = "briefcase";
+let AMAZON_DOMAINS = ["amazon.com", "amazon.ac", "amazon.ad", "amazon.ae", "amazon.com.af", "amazon.com.ag", "amazon.com.ai", "amazon.al", "amazon.am", "amazon.co.ao", "amazon.com.ar", "amazon.as", "amazon.at", "amazon.com.au", "amazon.az", "amazon.ba", "amazon.com.bd", "amazon.be", "amazon.bf", "amazon.bg", "amazon.com.bh", "amazon.bi", "amazon.bj", "amazon.com.bn", "amazon.com.bo", "amazon.com.br", "amazon.bs", "amazon.bt", "amazon.com.bw", "amazon.by", "amazon.com.bz", "amazon.ca", "amazon.com.kh", "amazon.cc", "amazon.cd", "amazon.cf", "amazon.cat", "amazon.cg", "amazon.ch", "amazon.ci", "amazon.co.ck", "amazon.cl", "amazon.cm", "amazon.cn", "amazon.com.co", "amazon.co.cr", "amazon.com.cu", "amazon.cv", "amazon.com.cy", "amazon.cz", "amazon.de", "amazon.dj", "amazon.dk", "amazon.dm", "amazon.com.do", "amazon.dz", "amazon.com.ec", "amazon.ee", "amazon.com.eg", "amazon.es", "amazon.com.et", "amazon.fi", "amazon.com.fj", "amazon.fm", "amazon.fr", "amazon.ga", "amazon.ge", "amazon.gf", "amazon.gg", "amazon.com.gh", "amazon.com.gi", "amazon.gl", "amazon.gm", "amazon.gp", "amazon.gr", "amazon.com.gt", "amazon.gy", "amazon.com.hk", "amazon.hn", "amazon.hr", "amazon.ht", "amazon.hu", "amazon.co.id", "amazon.iq", "amazon.ie", "amazon.co.il", "amazon.im", "amazon.co.in", "amazon.io", "amazon.is", "amazon.it", "amazon.je", "amazon.com.jm", "amazon.jo", "amazon.co.jp", "amazon.co.ke", "amazon.ki", "amazon.kg", "amazon.co.kr", "amazon.com.kw", "amazon.kz", "amazon.la", "amazon.lb", "amazon.com.lc", "amazon.li", "amazon.lk", "amazon.co.ls", "amazon.lt", "amazon.lu", "amazon.lv", "amazon.com.ly", "amazon.co.ma", "amazon.md", "amazon.me", "amazon.mg", "amazon.mk", "amazon.ml", "amazon.com.mm", "amazon.mn", "amazon.ms", "amazon.com.mt", "amazon.mu", "amazon.mv", "amazon.mw", "amazon.com.mx", "amazon.com.my", "amazon.co.mz", "amazon.com.na", "amazon.ne", "amazon.com.nf", "amazon.com.ng", "amazon.com.ni", "amazon.nl", "amazon.no", "amazon.com.np", "amazon.nr", "amazon.nu", "amazon.co.nz", "amazon.com.om", "amazon.com.pk", "amazon.com.pa", "amazon.com.pe", "amazon.com.ph", "amazon.pl", "amazon.com.pg", "amazon.pn", "amazon.com.pr", "amazon.ps", "amazon.pt", "amazon.com.py", "amazon.com.qa", "amazon.ro", "amazon.rs", "amazon.ru", "amazon.rw", "amazon.com.sa", "amazon.com.sb", "amazon.sc", "amazon.se", "amazon.com.sg", "amazon.sh", "amazon.si", "amazon.sk", "amazon.com.sl", "amazon.sn", "amazon.sm", "amazon.so", "amazon.st", "amazon.sr", "amazon.com.sv", "amazon.td", "amazon.tg", "amazon.co.th", "amazon.com.tj", "amazon.tk", "amazon.tl", "amazon.tm", "amazon.to", "amazon.tn", "amazon.com.tr", "amazon.tt", "amazon.com.tw", "amazon.co.tz", "amazon.com.ua", "amazon.co.ug", "amazon.co.uk", "amazon.us", "amazon.com.uy", "amazon.co.uz", "amazon.com.vc", "amazon.co.ve", "amazon.vg", "amazon.co.vi", "amazon.com.vn", "amazon.vu", "amazon.ws", "amazon.co.za", "amazon.co.zm", "amazon.co.zw", "youtube.com", "blogger.com", "doubleclickbyamazon.com", "amazonblog.com", "blog.amazon", "amazonusercontent.com"];
 
 const BLOGSPOT_DOMAINS = ["blogspot.com", "blogspot.ae", "blogspot.al", "blogspot.am", "blogspot.com.ar", "blogspot.co.at", "blogspot.com.au", "blogspot.ba", "blogspot.be", "blogspot.bg", "blogspot.bj", "blogspot.com.br", "blogspot.com.by", "blogspot.ca", "blogspot.cf", "blogspot.ch", "blogspot.cl", "blogspot.com.co", "blogspot.cv", "blogspot.com.cy", "blogspot.cz", "blogspot.de", "blogspot.dj", "blogspot.dk", "blogspot.dm", "blogspot.com.do", "blogspot.dz", "blogspot.com.eg", "blogspot.es", "blogspot.fi", "blogspot.fr", "blogspot.gr", "blogspot.hr", "blogspot.hu", "blogspot.co.id", "blogspot.ie", "blogspot.co.il", "blogspot.in", "blogspot.is", "blogspot.it", "blogspot.jp", "blogspot.co.ke", "blogspot.kr", "blogspot.li", "blogspot.lt", "blogspot.lu", "blogspot.md", "blogspot.mk", "blogspot.com.mt", "blogspot.mx", "blogspot.my", "blogspot.com.ng", "blogspot.nl", "blogspot.no", "blogspot.co.nz", "blogspot.pt", "blogspot.qa", "blogspot.ro", "blogspot.rs", "blogspot.ru", "blogspot.se", "blogspot.sg", "blogspot.si", "blogspot.sk", "blogspot.sn", "blogspot.com.sr", "blogspot.td", "blogspot.co.tl", "blogspot.co.to", "blogspot.com.tr", "blogspot.tw", "blogspot.co.uk", "blogspot.com.uy", "blogspot.co.za"];
 
-GOOGLE_DOMAINS = GOOGLE_DOMAINS.concat(BLOGSPOT_DOMAINS);
+AMAZON_DOMAINS = AMAZON_DOMAINS.concat(BLOGSPOT_DOMAINS);
 
 const MAC_ADDON_ID = "@testpilot-containers";
 
 let macAddonEnabled = false;
-let googleCookieStoreId = null;
+let amazonCookieStoreId = null;
 
 const canceledRequests = {};
 const tabsWaitingToLoad = {};
-const googleHostREs = [];
+const amazonHostREs = [];
 
 async function isMACAddonEnabled () {
   try {
@@ -111,14 +111,14 @@ function shouldCancelEarly (tab, options) {
   return false;
 }
 
-function generateGoogleHostREs () {
-  for (let googleDomain of GOOGLE_DOMAINS) {
-    googleHostREs.push(new RegExp(`^(.*\\.)?${googleDomain}$`));
+function generateAmazonHostREs () {
+  for (let amazonDomain of AMAZON_DOMAINS) {
+    amazonHostREs.push(new RegExp(`^(.*\\.)?${amazonDomain}$`));
   }
 }
 
-async function clearGoogleCookies () {
-  // Clear all google cookies
+async function clearAmazonCookies () {
+  // Clear all amazon cookies
   const containers = await browser.contextualIdentities.query({});
   containers.push({
     cookieStoreId: "firefox-default"
@@ -126,39 +126,39 @@ async function clearGoogleCookies () {
 
   let macAssignments = [];
   if (macAddonEnabled) {
-    const promises = GOOGLE_DOMAINS.map(async googleDomain => {
-      const assigned = await getMACAssignment(`https://${googleDomain}/`);
-      return assigned ? googleDomain : null;
+    const promises = AMAZON_DOMAINS.map(async amazonDomain => {
+      const assigned = await getMACAssignment(`https://${amazonDomain}/`);
+      return assigned ? amazonDomain : null;
     });
     macAssignments = await Promise.all(promises);
   }
 
-  GOOGLE_DOMAINS.map(async googleDomain => {
-    const googleCookieUrl = `https://${googleDomain}/`;
+  AMAZON_DOMAINS.map(async amazonDomain => {
+    const amazonCookieUrl = `https://${amazonDomain}/`;
 
-    // dont clear cookies for googleDomain if mac assigned (with or without www.)
+    // dont clear cookies for amazonDomain if mac assigned (with or without www.)
     if (macAddonEnabled &&
-        (macAssignments.includes(googleDomain) ||
-         macAssignments.includes(`www.${googleDomain}`))) {
+        (macAssignments.includes(amazonDomain) ||
+         macAssignments.includes(`www.${amazonDomain}`))) {
       return;
     }
 
     containers.map(async container => {
       const storeId = container.cookieStoreId;
-      if (storeId === googleCookieStoreId) {
-        // Don't clear cookies in the Google Container
+      if (storeId === amazonCookieStoreId) {
+        // Don't clear cookies in the Amazon Container
         return;
       }
 
       const cookies = await browser.cookies.getAll({
-        domain: googleDomain,
+        domain: amazonDomain,
         storeId
       });
 
       cookies.map(cookie => {
         browser.cookies.remove({
           name: cookie.name,
-          url: googleCookieUrl,
+          url: amazonCookieUrl,
           storeId
         });
       });
@@ -167,17 +167,17 @@ async function clearGoogleCookies () {
 }
 
 async function setupContainer () {
-  // Use existing Google container, or create one
-  const contexts = await browser.contextualIdentities.query({name: GOOGLE_CONTAINER_NAME});
+  // Use existing Amazon container, or create one
+  const contexts = await browser.contextualIdentities.query({name: AMAZON_CONTAINER_NAME});
   if (contexts.length > 0) {
-    googleCookieStoreId = contexts[0].cookieStoreId;
+    amazonCookieStoreId = contexts[0].cookieStoreId;
   } else {
     const context = await browser.contextualIdentities.create({
-      name: GOOGLE_CONTAINER_NAME,
-      color: GOOGLE_CONTAINER_COLOR,
-      icon: GOOGLE_CONTAINER_ICON
+      name: AMAZON_CONTAINER_NAME,
+      color: AMAZON_CONTAINER_COLOR,
+      icon: AMAZON_CONTAINER_ICON
     });
-    googleCookieStoreId = context.cookieStoreId;
+    amazonCookieStoreId = context.cookieStoreId;
   }
 }
 
@@ -192,10 +192,10 @@ function reopenTab ({url, tab, cookieStoreId}) {
   browser.tabs.remove(tab.id);
 }
 
-function isGoogleURL (url) {
+function isAmazonURL (url) {
   const parsedUrl = new URL(url);
-  for (let googleHostRE of googleHostREs) {
-    if (googleHostRE.test(parsedUrl.host)) {
+  for (let amazonHostRE of amazonHostREs) {
+    if (amazonHostRE.test(parsedUrl.host)) {
       return true;
     }
   }
@@ -208,14 +208,14 @@ function shouldContainInto (url, tab) {
     return false;
   }
 
-  if (isGoogleURL(url)) {
-    if (tab.cookieStoreId !== googleCookieStoreId) {
-      // Google-URL outside of Google Container Tab
-      // Should contain into Google Container
-      return googleCookieStoreId;
+  if (isAmazonURL(url)) {
+    if (tab.cookieStoreId !== amazonCookieStoreId) {
+      // Amazon-URL outside of Amazon Container Tab
+      // Should contain into Amazon Container
+      return amazonCookieStoreId;
     }
-  } else if (tab.cookieStoreId === googleCookieStoreId) {
-    // Non-Google-URL inside Google Container Tab
+  } else if (tab.cookieStoreId === amazonCookieStoreId) {
+    // Non-Amazon-URL inside Amazon Container Tab
     // Should contain into Default Container
     return "firefox-default";
   }
@@ -285,8 +285,8 @@ async function maybeReopenAlreadyOpenTabs () {
   });
 }
 
-async function containGoogle (options) {
-  // Listen to requests and open Google into its Container,
+async function containAmazon (options) {
+  // Listen to requests and open Amazon into its Container,
   // open other sites into the default tab context
   if (options.tabId === -1) {
     // Request doesn't belong to a tab
@@ -339,13 +339,13 @@ async function containGoogle (options) {
   } catch (error) {
     // TODO: Needs backup strategy
     // See https://github.com/mozilla/contain-facebook/issues/23
-    // Sometimes this add-on is installed but doesn't get a googleCookieStoreId ?
+    // Sometimes this add-on is installed but doesn't get a amazonCookieStoreId ?
     // eslint-disable-next-line no-console
     console.log(error);
     return;
   }
-  clearGoogleCookies();
-  generateGoogleHostREs();
+  clearAmazonCookies();
+  generateAmazonHostREs();
 
   // Clean up canceled requests
   browser.webRequest.onCompleted.addListener((options) => {
@@ -360,7 +360,7 @@ async function containGoogle (options) {
   },{urls: ["<all_urls>"], types: ["main_frame"]});
 
   // Add the request listener
-  browser.webRequest.onBeforeRequest.addListener(containGoogle, {urls: ["<all_urls>"], types: ["main_frame"]}, ["blocking"]);
+  browser.webRequest.onBeforeRequest.addListener(containAmazon, {urls: ["<all_urls>"], types: ["main_frame"]}, ["blocking"]);
 
   maybeReopenAlreadyOpenTabs();
 })();

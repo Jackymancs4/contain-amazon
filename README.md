@@ -1,47 +1,47 @@
-# Google Container
+# Amazon Container
 
-**Prevent Google from tracking your visits to other websites**
+**Prevent Amazon from tracking your visits to other websites**
 
 This is a fork of [Facebook Container](https://github.com/mozilla/contain-facebook)
 
-Google Container is an add-on you can install on Firefox to prevent Google from tracking your activity on other websites, so you can continue to use Google while protecting your privacy.
+Amazon Container is an add-on you can install on Firefox to prevent Amazon from tracking your activity on other websites, so you can continue to use Amazon while protecting your privacy.
 
 **Note:** To learn more about Containers in general, see [Firefox Multi-Account Containers](https://support.mozilla.org/kb/containers).
 
-## How does Google Container work?
+## How does Amazon Container work?
 
-The Add-on keeps Google in a separate Container to prevent it from following your activity on other websites. When you first install the add-on, it signs you out of Google and deletes the cookies that Google uses to track you on other websites. 
+The Add-on keeps Amazon in a separate Container to prevent it from following your activity on other websites. When you first install the add-on, it signs you out of Amazon and deletes the cookies that Amazon uses to track you on other websites.
 
-Every time you visit Google, it will open in its own container, separate from other websites you visit.  You can login to Google within its container.  When browsing outside the container, Google won’t be able to easily collect your browsing data and connect it to your Google identity.
+Every time you visit Amazon, it will open in its own container, separate from other websites you visit.  You can login to Amazon within its container.  When browsing outside the container, Amazon won’t be able to easily collect your browsing data and connect it to your Amazon identity.
 
-## How do I enable Google Container?
+## How do I enable Amazon Container?
 
 We’ve made it easy to take steps to protect your privacy so you can go on with your day.
 
-1. [Install Google Container](https://addons.mozilla.org/firefox/addon/google-container/). This will log you out of Google and delete the cookies it’s been using to track you.
-2. Open Google and use it like you normally would.  Firefox will automatically switch to the Google Container tab for you.
-3. If you click on a link to a page outside of Google or type in another website in the address bar, Firefox will load them outside of the Google Container
+1. [Install Amazon Container](https://addons.mozilla.org/firefox/addon/amazon-container/). This will log you out of Amazon and delete the cookies it’s been using to track you.
+2. Open Amazon and use it like you normally would.  Firefox will automatically switch to the Amazon Container tab for you.
+3. If you click on a link to a page outside of Amazon or type in another website in the address bar, Firefox will load them outside of the Amazon Container
 
-## How does this affect Google’s features?
+## How does this affect Amazon’s features?
 
-Google Containers prevents Google from linking your activity on other websites to your Google identity. Therefore, the following will not work:
+Amazon Containers prevents Amazon from linking your activity on other websites to your Amazon identity. Therefore, the following will not work:
 
-### “Like” buttons and embedded Google comments on other websites.
+### “Like” buttons and embedded Amazon comments on other websites.
 
-Because you are logged into Google only in the Container, “Like” buttons and embedded Google comments on other websites will not work.
+Because you are logged into Amazon only in the Container, “Like” buttons and embedded Amazon comments on other websites will not work.
 
-### Logging in or creating accounts on other websites using Google
+### Logging in or creating accounts on other websites using Amazon
 
-Websites that allow you to create an account or log in using Google will generally not work properly.
+Websites that allow you to create an account or log in using Amazon will generally not work properly.
 
-## Will this protect me from Google completely?
+## Will this protect me from Amazon completely?
 
-This add-on does not prevent Google from mishandling the data it already has or permitted others to obtain about you. Google still will have access to everything that you do while you are on google.com or on any Google app, including your Google comments, photo uploads, likes, and any data you share with Google connected apps, etc.  
+This add-on does not prevent Amazon from mishandling the data it already has or permitted others to obtain about you. Amazon still will have access to everything that you do while you are on amazon.com or on any Amazon app, including your Amazon comments, photo uploads, likes, and any data you share with Amazon connected apps, etc.  
 
-Other ad networks may try to link your Google activities with your regular browsing. In addition to this add-on, there are other things you can do to maximize your protection, including changing your Google settings, using Private Browsing and Tracking Protection, blocking third-party cookies, and/or using [Firefox Multi-Account Containers](https://addons.mozilla.org/firefox/addon/multi-account-containers/ ) extension to further limit tracking.
+Other ad networks may try to link your Amazon activities with your regular browsing. In addition to this add-on, there are other things you can do to maximize your protection, including changing your Amazon settings, using Private Browsing and Tracking Protection, blocking third-party cookies, and/or using [Firefox Multi-Account Containers](https://addons.mozilla.org/firefox/addon/multi-account-containers/ ) extension to further limit tracking.
 
 ## How do I use Containers for other websites?
 
-Good news! Containers aren’t just for Google. You can use Containers to prevent websites from linking your identities across the Web by installing [Firefox Multi-Account Containers](https://addons.mozilla.org/firefox/addon/multi-account-containers/).
+Good news! Containers aren’t just for Amazon. You can use Containers to prevent websites from linking your identities across the Web by installing [Firefox Multi-Account Containers](https://addons.mozilla.org/firefox/addon/multi-account-containers/).
 
 To learn more about how Mult-Account Containers work, see our support page at [Firefox Multi-Account Containers](https://addons.mozilla.org/firefox/addon/multi-account-containers/).
