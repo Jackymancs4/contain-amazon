@@ -1,35 +1,29 @@
 {
-    "manifest_version": 2,
-    "name": "Amazon Container",
-    "version": "1.0.0",
-
-    "description": "Amazon Container isolates your Amazon activity from the rest of your web activity in order to prevent Amazon from tracking you outside of the Amazon website via third party cookies.",
-
-    "icons": {
-        "48": "icon.png",
-        "96": "icon@2x.png"
-    },
-
-    "applications": {
-      "gecko": {
-        "id": "@contain-amazon",
-        "strict_min_version": "57.0"
-      }
-    },
-
-    "homepage_url": "https://github.com/Jackymancs4/contain-amazon",
-
-    "permissions": [
-        "<all_urls>",
-        "contextualIdentities",
-        "cookies",
-        "management",
-        "tabs",
-        "webRequestBlocking",
-        "webRequest"
-    ],
-
-    "background": {
-        "scripts": ["background.js"]
+  "manifest_version": 2,
+  "name": "Amazon Container",
+  "version": "1.0.0",
+  "description": "Amazon Container isolates your Amazon activity from the rest of your web activity in order to prevent Amazon from tracking you outside of the Amazon website via third party cookies.",
+  "icons": {
+    "48": "icon.png",
+    "96": "icon@2x.png"
+  },
+  "applications": {
+    "gecko": {
+      "id": "@contain-amazon",
+      "strict_min_version": "57.0"
     }
+  },
+  "homepage_url": "https://github.com/Jackymancs4/contain-amazon",
+  "permissions": [
+    "<all_urls>",
+    "contextualIdentities",
+    "cookies",
+    "management",
+    "tabs",
+    "webRequestBlocking",
+    "webRequest"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
 }
