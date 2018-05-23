@@ -2,7 +2,12 @@
 const AMAZON_CONTAINER_NAME = "Amazon";
 const AMAZON_CONTAINER_COLOR = "yellow";
 const AMAZON_CONTAINER_ICON = "briefcase";
-let AMAZON_DOMAINS = [];
+
+let AMAZON_NATIONAL_DOMAINS = ["amazon.it", "amazon.de", "amazon.com", "amazon.com.br", "amazon.in", "amazon.com.au", "amazon.es", "amazon.com.mx", "amazon.co.jp", "amazon.in", "amazon.co.uk", "amazon.ca", "amazon.fr", "amazon.com.sg"];
+
+let AMAZON_DOMAINS = ["awscloud.com", "amazon.company", "amazon.express", "amazon.gd", "amazon.international", "amazon.ltda", "amazon.press", "amazon.shopping", "amazon.tickets", "amazon.tv", "amazon.cruises", "amazon.dog", "amazon.express", "amazon.game", "amazon.gent", "amazon.salon", "amazon.shopping", "amazon.tours", "amazon.wiki", "amazon.clothing", "amazon.energy", "amazon.fund", "amazon.hockey", "amazon.kiwi", "amazon.re", "amazon.soccer", "amazon.tienda", "amazon.training", "amazon.jobs", "primevideo.com", "mturk.com", "lab126.com", "amazonpay.in", "amazonteam.org", "awsevents.com", "seattlespheres.com"];
+
+AMAZON_DOMAINS = AMAZON_DOMAINS.concat(AMAZON_NATIONAL_DOMAINS);
 
 const MAC_ADDON_ID = "@testpilot-containers";
 
