@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "description": "Amazon Container isolates your Amazon activity from the rest of your web activity in order to prevent Amazon from tracking you outside of the Amazon website via third party cookies.",
   "icons": {
-    "48": "icon.png",
-    "96": "icon@2x.png"
+    "48": "icon.svg",
+    "96": "icon.svg"
   },
   "applications": {
     "gecko": {
